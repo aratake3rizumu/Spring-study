@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link th:href="@{/css/index.css}" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<img th:src="@{/image/IMG_5745.JPG}">
+	<h1>サイト名</h1>
+	<div class = "profile">
+		<h1>プロフィール</h1>
+		<h2 th:text="${name}"></h2>
+		<h2 th:text="${age}"></h2>
+		<h2 th:text="${height}"></h2>
+		<h2 th:text="${weight}"></h2>
+		<h2 th:text="${from}"></h2>
+	</div>
+	<form action = "/day20" method = "POST">
+		<label>名前</label><input type = "text" name = "nameVal" th:value = "${name}">
+		<label>年齢</label><input type = "text" name = "ageVal" >
+		<label>身長</label><input type = "text" name = "heightVal">
+		<label>体重</label><input type = "text" name = "weightVal">
+		<label>出身地</label><input type = "text" name = "fromVal">
+		<input type = "submit", value = "送信">
+	</form>
+</body>
+</html>

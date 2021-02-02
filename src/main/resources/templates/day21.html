@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<div th:include="header :: header_part"></div>
+		<p th:text="${name}"></p>
+		<h1 th:unless="${suzuki}">ようこそ鈴木Java五郎さん!</h1>
+		<form action="/day21" method="POST">
+			<h2>鈴木Java五郎さんですか?</h2>
+			<input type="submit" , value="はい">
+		</form>
+	</body>
+</html>

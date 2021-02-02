@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>〜〜荒武食堂〜〜</h1>
+		<h2>決済方法</h2>
+		<p th:text="${account}"></p>
+		<form action="/app/pay" method="POST">
+			<h2>確定しますか？</h2>
+			<input type="submit" value="はい" name=true>
+		</form>
+		<form action="/app" method="GET">
+		<input type="submit" value="戻る" name=false>
+		</form>
+	</body>
+</html>

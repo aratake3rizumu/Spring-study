@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>〜〜荒武食堂〜〜</h1>
+			<h2>MENU</h2>
+			<form action="app/total" method=POST>
+				<h3>焼き魚定食/700円</h3>
+				<img th:src="@{/image/fish.jpg}"><input type="checkbox" name="fish"><input type="hidden" name="fish">
+				<h3>エビフライ定食/800円</h3>
+				<img th:src="@{/image/shrimp.jpg}"><input type="checkbox" name="shrimp"><input type="hidden" name="shrimp">
+				<h3>味噌カツ定食/900円</h3>
+				<img th:src="@{/image/katsu.jpg}"><input type="checkbox" name="katsu"><input type="hidden" name="katsu">
+				<h3>ビール/500円</h3>
+				<img th:src="@{image/beer.jpg}" width="300" height="200"><input type="checkbox" name="beer"><input type="hidden" name="beer">
+				<input type="submit" value="追加">
+			</form>
+	</body>
+</html>

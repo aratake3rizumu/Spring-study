@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>〜〜荒武食堂〜〜</h1>
+
+		<h2>注文内容確認</h2>
+		<p th:text="${fish}"></p>
+		<p th:text="${shrimp}"></p>
+		<p th:text="${katsu}"></p>
+		<p th:text="${beer}"></p>
+		<h3>合計金額</h3>
+		<p th:text="${total}"></p>
+
+		<h2>内容に間違いがなければ、決済方法を選択します</h2>
+		<form action="/app/account" method="POST">
+			<select name="account">
+				<option value="現金">現金</option>
+				<option value="クレジット">クレジット</option>
+				<option value="バーコード決済">バーコード決済</option>
+			</select>
+			<h2>注文に進みますか？</h2>
+			<input type="submit" value="はい" name=true>
+		</form>
+		<form action="/app" method="GET">
+		<input type="submit" value="戻る" name=false>
+		</form>
+	</body>
+</html>
